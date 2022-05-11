@@ -1,8 +1,5 @@
-package com.architecturepattern.listentoyourself.consumer;
+package com.architecturepattern.listentoyourselfconsumer;
 
-import com.architecturepattern.listentoyourself.consumer.EventDeserializer;
-import com.fasterxml.jackson.databind.JsonSerializer;
-//import com.kafka.consumer.PersonDeserializer;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -24,7 +21,7 @@ public class KafkaTopicConfig {
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "foo");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "otherlistener");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, EventDeserializer.class);
         return new DefaultKafkaConsumerFactory<>(props);

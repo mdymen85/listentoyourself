@@ -18,6 +18,8 @@ public class ProducerService {
 
     public void send(EventProducer event) {
 
+        log.info("Sending message {} to topic {}.", event, topic);
+
         kafkaTemplate.send(topic, event);
 
     }

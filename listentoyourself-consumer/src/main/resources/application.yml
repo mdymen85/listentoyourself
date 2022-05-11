@@ -1,0 +1,28 @@
+topic:
+  name: listentoyourself
+
+server:
+  port: 8083
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: com.architecturepattern.listentoyourselfconsumer.EventDeserializer
+      auto-offset-reset: earliest
+
+  datasource:
+    #driverClassName: org.h2.Driver
+    #url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1
+    driver-classe-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/payments1?allowPublicKeyRetrieval=true&autoReconnect=true
+    username: root
+    password: mdymen_pass
+    jpa:
+      show-sql: true
+
+hibernate:
+  dialect: org.hibernate.dialect.H2Dialect
+  hbm2ddl:
+    auto: create
