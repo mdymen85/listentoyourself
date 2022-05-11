@@ -12,9 +12,9 @@ Apparently this pattern arrived to my life in a mysterious way and i decided to 
 When the consumer pick a message from the topic, with a specific group-id, it saves in a database table. Other consumer **listentoyourself-consumer**, with a differente group-id, is 
 listening that topic so this consumer can also pick de message and save it in another table.
 
-## Structure
+## Architecture
 
-I used kafka in docker, as zookeeper, and also mysql as database.
+![Architecture](listen.png)
 
 ## Links
 
