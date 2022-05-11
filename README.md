@@ -19,6 +19,7 @@ I used kafka in docker, as zookeeper, and also mysql as database.
 ## Links
 
 [Stop Overusing the Outbox Pattern](https://www.squer.at/en/blog/stop-overusing-the-outbox-pattern/)
+
 [Listen to Yourself: A Design Pattern for Event-Driven Microservices](https://medium.com/@odedia/listen-to-yourself-design-pattern-for-event-driven-microservices-16f97e3ed066)
 
 ## DDL and Curl
